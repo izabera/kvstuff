@@ -1,0 +1,23 @@
+if ($window.type != "channel") {
+  echo Must be in a channel
+  halt
+}
+
+if (!$str.contains($chan.mode,"c",1)) {
+  if ($0) {
+    %message = "$k(0,12)==>$k(0,13)$b() $0-"
+  }
+  %call = "$k(0,7)"
+}
+else {
+  if ($0) {
+    %message = "==>$b() $0-"
+  }
+  %call = ""
+}
+
+foreach (%user, $chan.users)
+  if (%user != $my.nick) %call << %user
+
+%call << %message
+echo %call

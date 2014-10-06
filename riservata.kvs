@@ -1,0 +1,2 @@
+if (!$0) say $k(9,1)$b()La prossima domanda è riservata a chi non ha ancora punti!
+else say $k(9,1)$b()La prossima domanda è riservata a $0-!
