@@ -1,0 +1,30 @@
+# new handler OnTextInput
+
+# add chan names here
+if ($target == "#chan1" || $target == "#chan2") {
+  %string=$0
+#,1 = case sensitive
+  %string=$str.replace(%string,"À","A'",1)
+  %string=$str.replace(%string,"Á","A'",1)
+  %string=$str.replace(%string,"È","E'",1)
+  %string=$str.replace(%string,"É","E'",1)
+  %string=$str.replace(%string,"Ì","I'",1)
+  %string=$str.replace(%string,"Í","I'",1)
+  %string=$str.replace(%string,"Ò","O'",1)
+  %string=$str.replace(%string,"Ó","O'",1)
+  %string=$str.replace(%string,"Ù","U'",1)
+  %string=$str.replace(%string,"Ú","U'",1)
+  %string=$str.replace(%string,"à","a'",1)
+  %string=$str.replace(%string,"á","a'",1)
+  %string=$str.replace(%string,"è","e'",1)
+  %string=$str.replace(%string,"é","e'",1)
+  %string=$str.replace(%string,"ì","i'",1)
+  %string=$str.replace(%string,"í","i'",1)
+  %string=$str.replace(%string,"ò","o'",1)
+  %string=$str.replace(%string,"ó","o'",1)
+  %string=$str.replace(%string,"ù","u'",1)
+  %string=$str.replace(%string,"ú","u'",1)
+  say %string
+#halt to avoid sending the message twice
+  halt
+}
